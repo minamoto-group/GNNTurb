@@ -1,0 +1,83 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      turbulenceProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType LES;
+
+LES
+{
+    LESModel        GNNTurb;
+
+    turbulence      on;
+
+    printCoeffs     on;
+
+    delta           cubeRootVol;
+
+    GNNTurbCoeffs 
+    {
+        useCUDA     on;
+
+        // DO NOT CHANGE THE PARAMETERS (Ne, modelPath, inputNames and scalingCoeffs).
+        modelPath   "./constant/model/b11ae3543c9c4fc19c7104b273f65814.pt";
+
+        Ne          10.0;
+
+        inputNames
+        (
+			expDWallDelta
+			dudx
+			dudy
+			dudz
+			dvdx
+			dvdy
+			dvdz
+			dwdx
+			dwdy
+			dwdz
+			u_fluc_delta
+			v_fluc_delta
+			w_fluc_delta
+        );
+
+        scalingCoeffs
+        {
+            expDWallDelta	1.0;
+            dudx	        39.15783129117021;
+            dudy	        78.18074699490124;
+            dudz	        78.18074699490124;
+            dvdx	        78.18074699490124;
+            dvdy	        39.1578312911702;
+            dvdz	        78.18074699490124;
+            dwdx	        78.18074699490124;
+            dwdy	        78.18074699490124;
+            dwdz	        39.1578312911702;
+            u_fluc_delta	2.941595635128902;
+            v_fluc_delta	2.941595635128902;
+            w_fluc_delta	2.935118694545764;
+            tau11	        8479.461701220767;
+            tau12	        4239.35477544314;
+            tau13	        4543.351559490035;
+            tau22	        8479.46170122077;
+            tau23	        4543.351559490036;
+            tau33	        8479.46170122077;
+        }
+    }
+
+    cubeRootVolCoeffs
+    {
+        deltaCoeff      1;
+    }
+}
