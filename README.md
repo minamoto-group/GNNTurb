@@ -1,5 +1,4 @@
-# GNNTurb
-
+# GNNTurb: GNN-based SGS stress model in OpenFOAM
 
 ## Docker
 
@@ -13,3 +12,8 @@ This docker image is based on [nvidia/cuda](https://hub.docker.com/r/nvidia/cuda
 Example of creating a docker container:
 1. `$ docker build -t <custom image name> --build-arg USERID="$(id -u $USER)" --build-arg GROUPID="$(id -g $USER)" --build-arg USERNAME="$(id -u $USER --name)" .`
 2. `$ docker run --rm -it --init --runtime=nvidia -v ${PWD}:/work <custom image name> /bin/bash`
+
+
+## Reference
+
+Asahi Abekawa , Yuki Minamoto , Kosuke Osawa , Haruya Shimamoto , and Mamoru Tanahashi , "Exploration of robust machine learning strategy for subgrid scale stress modelling", Physics of Fluids (in press) (2023); https://doi.org/10.1063/5.0134471
