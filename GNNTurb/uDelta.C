@@ -92,7 +92,7 @@ void GNNTurb<BasicTurbulenceModel>::correctUDelta() {
             UPrimeSqdBar.replace(d, std::accumulate(uiPS_with_nbr.begin(), uiPS_with_nbr.end(), scalar(0.)) / g.num_nodes);
         }
         uDelta[celli] = sqrt((UPrimeSqdBar.x() + UPrimeSqdBar.y() + UPrimeSqdBar.z()) / 3.0);
-        
+
         if (uDelta[celli] < eps) 
             uDelta[celli] += eps;
     }

@@ -43,9 +43,9 @@ void GNNTurb<BasicTurbulenceModel>::correctUFlucDelta() {
     const volVectorField& U = this->U_;
     const surfaceVectorField U_surfaceField = fvc::interpolate(U);
     const volVectorField::Boundary& U_boundaryField = U.boundaryField();
-    
+
     volVectorField& UFlucDelta = this->UFlucDelta_;
-    
+
     forAll(this->mesh_.cells(), celli) {
         const CellFaceStarGraphType& g = this->Data_.G[celli];
         assert(g.reference_cid == celli);

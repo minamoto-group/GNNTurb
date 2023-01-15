@@ -47,5 +47,3 @@ target_link_libraries(GNNTurb PUBLIC TorchSplineConv::TorchSplineConv)
 
 target_compile_features(GNNTurb PUBLIC cxx_range_for)
 set_property(TARGET GNNTurb PROPERTY CXX_STANDARD 14)
-
-#https://www.cfd-online.com/Forums/openfoam-programming-development/205243-share-something-about-dev-openfoam-using-cmake-rather-than-wmake.html

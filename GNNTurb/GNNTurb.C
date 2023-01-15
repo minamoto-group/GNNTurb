@@ -330,9 +330,9 @@ template <class BasicTurbulenceModel>
 void GNNTurb<BasicTurbulenceModel>::buildGraph() {
     const scalarField& delta = this->adjustedDelta().primitiveField();
     const surfaceScalarField surface_delta = fvc::interpolate(this->adjustedDelta()); // get surface values
-    
+
     std::vector<CellFaceStarGraphType> G;
-    
+
     Info << "GNNTurb:  " << "Constructing graph data..." << endl;
 
     forAll(this->mesh_.cells(), celli) {

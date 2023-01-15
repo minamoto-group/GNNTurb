@@ -54,7 +54,7 @@ class GNNTurb
 : 
     public LESDirectTauij<BasicTurbulenceModel> 
 {
-    
+
 protected:
 
     // Protected data
@@ -73,7 +73,7 @@ protected:
             volScalarField adjustedDelta_; // filter width with non-zero value on the walls
             volScalarField expDWallDelta_; // exp(-d_wall / \Delta)
             volScalarField uDelta_; // u_\Delta
-            volVectorField UFlucDelta_; // u_i - <u_i>_\Delta
+            volVectorField UFlucDelta_; // (u_i - <u_i>_\Delta)
 
         // Internal variables
 
@@ -94,8 +94,8 @@ protected:
 
         //- Calculate u_\Delta at a cell
         virtual void correctUDelta();
-        
-        //- Calculate u_i - <u_i>_\Delta at a cell
+
+        //- Calculate (u_i - <u_i>_\Delta) at a cell
         virtual void correctUFlucDelta();
 
 
