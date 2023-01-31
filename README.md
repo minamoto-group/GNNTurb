@@ -16,4 +16,4 @@ Example of creating a docker container:
 
 ## Reference
 
-Asahi Abekawa , Yuki Minamoto , Kosuke Osawa , Haruya Shimamoto , and Mamoru Tanahashi , "Exploration of robust machine learning strategy for subgrid scale stress modelling", Physics of Fluids (in press) (2023); https://doi.org/10.1063/5.0134471
+A. Abekawa, Y. Minamoto, K. Osawa, H. Shimamoto, and M. Tanahashi , "Exploration of robust machine learning strategy for subgrid scale stress modeling", Physics of Fluids 35, 015162 (2023) https://doi.org/10.1063/5.0134471
